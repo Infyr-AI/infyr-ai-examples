@@ -10,3 +10,10 @@ dependencies = [
     "streamlit>=1.45.0",
     "watchdog>=6.0.0",
 ]
+
+[dependency-groups]
+dev = [
+    "isort>=6.0.1",
+    "jupyter>=1.1.1",
+    "ruff>=0.11.9",
+]
