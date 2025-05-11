@@ -17,14 +17,6 @@ const INITIAL_BOT_MESSAGE: Message = {
   timestamp: new Date(),
 };
 
-// Initialize OpenAI with custom URL and API key
-const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY || "your-api-key",
-  baseURL:
-    process.env.NEXT_PUBLIC_OPENAI_BASE_URL || "https://api.openai.com/v1",
-  dangerouslyAllowBrowser: true, // Only use this for demo purposes
-});
-
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([INITIAL_BOT_MESSAGE]);
